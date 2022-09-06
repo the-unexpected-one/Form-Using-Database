@@ -2,16 +2,16 @@ const Sequelize=require('sequelize');
 
 const sequelize=require('../util/database.js')
 
-const User=sequelize.define('form',{
+const Expenses=sequelize.define('expense',{
     id:{
         type:Sequelize.INTEGER,
         autoIncrement:true,
         allowNull:false,
         primaryKey:true
     },
-    name: Sequelize.STRING,
-    email:Sequelize.STRING,
-    phone:Sequelize.INTEGER
+    amount: Sequelize.INTEGER,
+    desc:Sequelize.STRING,
+    category:Sequelize.STRING
 });
 
-module.exports=User;
+module.exports=Expenses;
